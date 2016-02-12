@@ -10,6 +10,14 @@ TARGET=m6812-elf
 
 NO_WERROR=--disable-werror
 
+#---------------------------------------------------------------------------------
+# Decompress sources
+#---------------------------------------------------------------------------------
+echo "Decompressing Archives"
+tar -zxf binutils-2.18.50.tar.gz
+tar -zxf gcc-4.2.tar.gz
+tar -zxf newlib-1.16.0.tar.gz 
+
 echo "Building GNU HC12 Toolchain"
 
 echo "Creating output directories.."
