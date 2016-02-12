@@ -15,7 +15,10 @@ Requirements
 Build
 -----
 
-Script provided will build toolchain automatically (TODO)
+```bash
+~$ cd path/to/gnu-hc12-sources
+~$ ./mk-toolchain.sh
+```
 
 Download link to source tar balls
 ---------------------------------

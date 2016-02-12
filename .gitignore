@@ -1,1 +1,4 @@
 build/*
+binutils-2.18.50/
+gcc-4.2/
+newlib-1.16.0/
