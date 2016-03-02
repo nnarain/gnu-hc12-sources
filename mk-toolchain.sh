@@ -25,6 +25,7 @@ mkdir -p build/bin
 cd build/bin
 
 INSTALL_PREFIX=$(pwd)
+BIN_PATH=$(pwd)/bin
 cd ..
 
 #---------------------------------------------------------------------------------
@@ -46,6 +47,11 @@ echo "Configure and building gcc"
 $GCC_DIR/configure --target=$TARGET --prefix=$INSTALL_PREFIX --disable-nls --disable-libssp --enable-languages=c,c++ $NO_WERROR && make -j2 && make install
 
 cd ..
+
+#----------------------------------------------------------------------------------
+# Add hc12 compiler toolchain to path
+#----------------------------------------------------------------------------------
+export PATH=$PATH:$BIN_PATH
 
 #-----------------------------------------------------------------------------------
 # Configure and build newlib
